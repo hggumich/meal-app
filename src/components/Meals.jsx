@@ -1,4 +1,5 @@
 import { useGlobalContext } from '../context';
+import '../App.css';
 
 const Meals = () => {
   const { meals } = useGlobalContext();
@@ -9,7 +10,7 @@ const Meals = () => {
         const { idMeal, strMeal: title, strMealThumb: image } = singleMeal;
         return (
           <article key={idMeal} className="single-meal">
-            <img src={image} style={{ width: '200px' }} className="img" />
+            <img src={image} alt={title} className="img" />
             <footer>
               <h5>{title}</h5>
               <button className="like-btn">click me</button>
